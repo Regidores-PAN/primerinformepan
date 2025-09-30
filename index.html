@@ -20,21 +20,21 @@
             --shadow: 0 10px 30px rgba(0, 85, 164, 0.15);
             --shadow-hover: 0 20px 40px rgba(0, 85, 164, 0.25);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
-        
+
         body {
             background: var(--gradient-light);
             color: var(--dark-blue);
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         /* Splash Screen con fondo BLANCO */
         .splash-screen {
             position: fixed;
@@ -50,12 +50,12 @@
             opacity: 1;
             transition: opacity 0.8s ease;
         }
-        
+
         .splash-content {
             text-align: center;
             color: var(--dark-blue);
         }
-        
+
         .splash-logo {
             width: 400px;
             max-width: 80%;
@@ -67,25 +67,25 @@
             margin: 0 auto;
             background: transparent;
         }
-        
+
         .splash-logo img {
             width: 100%;
             height: auto;
             border-radius: 10px;
-            background: transparent; /* Fondo transparente para el logo */
+            background: transparent;
         }
-        
+
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
-        
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -95,14 +95,14 @@
             animation: fadeInUp 1s ease forwards;
             animation-delay: 5.5s;
         }
-        
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         header {
             background: var(--gradient-blue);
             color: white;
@@ -113,7 +113,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         header::before {
             content: "";
             position: absolute;
@@ -123,7 +123,7 @@
             height: 5px;
             background: var(--accent-blue);
         }
-        
+
         .header-content {
             display: flex;
             flex-direction: column;
@@ -132,7 +132,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .header-logo {
             width: 300px;
             max-width: 80%;
@@ -140,23 +140,23 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 25px;
-            background: transparent; /* Fondo transparente */
+            background: transparent;
         }
-        
+
         .header-logo img {
             width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            background: transparent; /* Fondo transparente para el logo */
+            background: transparent;
         }
-        
+
         .header-title {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
+
         h1 {
             font-size: 2.4rem;
             margin-bottom: 10px;
@@ -164,14 +164,14 @@
             letter-spacing: -0.5px;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
         .subtitle {
             font-size: 1.3rem;
             margin-bottom: 25px;
             opacity: 0.9;
             font-weight: 300;
         }
-        
+
         .contact-info {
             background: rgba(255, 255, 255, 0.2);
             padding: 25px;
@@ -182,7 +182,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        
+
         .contact-info p {
             margin: 10px 0;
             display: flex;
@@ -191,19 +191,19 @@
             gap: 12px;
             font-size: 1.1rem;
         }
-        
+
         .contact-info i {
             width: 24px;
             text-align: center;
         }
-        
+
         .regidores-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 35px;
             margin-top: 40px;
         }
-        
+
         .regidor-card {
             background: white;
             border-radius: 25px;
@@ -215,14 +215,14 @@
             transform: translateY(30px);
             animation: cardAppear 0.8s ease forwards;
         }
-        
+
         @keyframes cardAppear {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .regidor-card:nth-child(1) { animation-delay: 6s; }
         .regidor-card:nth-child(2) { animation-delay: 6.2s; }
         .regidor-card:nth-child(3) { animation-delay: 6.4s; }
@@ -234,22 +234,21 @@
         .regidor-card:nth-child(9) { animation-delay: 7.6s; }
         .regidor-card:nth-child(10) { animation-delay: 7.8s; }
         .regidor-card:nth-child(11) { animation-delay: 8s; }
-        
+
         .regidor-card:hover {
             transform: translateY(-15px);
             box-shadow: var(--shadow-hover);
         }
-        
-        /* CONTENEDOR DE IMAGEN ADAPTATIVO - MANTIENE PROPORCIÓN */
+
         .regidor-img {
             width: 100%;
             height: 0;
-            padding-bottom: 150%; /* Proporción 260x390 = 66.66% pero ajustamos para mejor visualización */
+            padding-bottom: 150%;
             background: linear-gradient(135deg, var(--light-blue) 0%, var(--accent-blue) 100%);
             position: relative;
             overflow: hidden;
         }
-        
+
         .regidor-img img {
             position: absolute;
             top: 0;
@@ -257,19 +256,19 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top center; /* Enfoca en la parte superior para mostrar rostros */
+            object-position: top center;
             transition: all 0.5s ease;
         }
-        
+
         .regidor-card:hover .regidor-img img {
             transform: scale(1.05);
         }
-        
+
         .regidor-content {
             padding: 30px;
             position: relative;
         }
-        
+
         .regidor-name {
             font-size: 1.6rem;
             font-weight: 700;
@@ -277,14 +276,14 @@
             margin-bottom: 8px;
             line-height: 1.3;
         }
-        
+
         .regidor-position {
             font-size: 1.1rem;
             color: var(--secondary-blue);
             margin-bottom: 12px;
             font-weight: 600;
         }
-        
+
         .regidor-commission {
             font-size: 1rem;
             color: var(--dark-blue);
@@ -293,14 +292,14 @@
             border-bottom: 1px solid var(--light-blue);
             line-height: 1.5;
         }
-        
+
         .social-links {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
             justify-content: center;
         }
-        
+
         .social-link {
             display: flex;
             align-items: center;
@@ -316,7 +315,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .social-link::before {
             content: "";
             position: absolute;
@@ -328,17 +327,17 @@
             transition: all 0.3s ease;
             z-index: -1;
         }
-        
+
         .social-link:hover {
             color: white;
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 85, 164, 0.3);
         }
-        
+
         .social-link:hover::before {
             left: 0;
         }
-        
+
         footer {
             text-align: center;
             margin-top: 80px;
@@ -350,7 +349,7 @@
             animation-delay: 8.5s;
             position: relative;
         }
-        
+
         footer::before {
             content: "";
             position: absolute;
@@ -362,14 +361,14 @@
             background: var(--primary-blue);
             border-radius: 3px;
         }
-        
+
         .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 15px;
         }
-        
+
         .footer-logos {
             display: flex;
             justify-content: center;
@@ -377,202 +376,95 @@
             gap: 20px;
             margin-top: 15px;
         }
-        
+
         .footer-logo {
             width: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: transparent; /* Fondo transparente */
+            background: transparent;
         }
-        
+
         .footer-logo img {
             max-width: 100%;
             height: auto;
-            background: transparent; /* Fondo transparente para el logo */
+            background: transparent;
         }
-        
-        /* Responsive Design - MÁS ADAPTATIVO */
+
+        /* Responsive Design */
         @media (max-width: 1200px) {
-            .container {
-                max-width: 95%;
-            }
-            
-            .regidores-grid {
-                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            }
+            .container { max-width: 95%; }
+            .regidores-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
         }
-        
+
         @media (max-width: 992px) {
-            .regidores-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 30px;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .splash-logo {
-                width: 350px;
-            }
-            
-            .regidor-content {
-                padding: 25px;
-            }
+            .regidores-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1.2rem; }
+            .splash-logo { width: 350px; }
+            .regidor-content { padding: 25px; }
         }
-        
+
         @media (max-width: 768px) {
-            .regidores-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 25px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .contact-info p {
-                flex-direction: column;
-                gap: 5px;
-                text-align: center;
-            }
-            
-            .splash-logo {
-                width: 300px;
-            }
-            
-            .header-logo {
-                width: 250px;
-            }
-            
-            .footer-logo {
-                width: 150px;
-            }
-            
-            .regidor-img {
-                padding-bottom: 140%; /* Ajuste para tablets */
-            }
+            .regidores-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+            h1 { font-size: 2rem; }
+            .subtitle { font-size: 1.1rem; }
+            .contact-info p { flex-direction: column; gap: 5px; text-align: center; }
+            .splash-logo { width: 300px; }
+            .header-logo { width: 250px; }
+            .footer-logo { width: 150px; }
+            .regidor-img { padding-bottom: 140%; }
         }
-        
+
         @media (max-width: 576px) {
-            .regidores-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            header {
-                padding: 30px 20px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .contact-info {
-                padding: 20px;
-            }
-            
-            .regidor-content {
-                padding: 20px;
-            }
-            
-            .regidor-name {
-                font-size: 1.4rem;
-            }
-            
-            .social-link {
-                width: 40px;
-                height: 40px;
-                font-size: 1.1rem;
-            }
-            
-            .splash-logo {
-                width: 250px;
-            }
-            
-            .header-logo {
-                width: 200px;
-            }
-            
-            .regidor-img {
-                padding-bottom: 130%; /* Ajuste para móviles */
-            }
+            .regidores-grid { grid-template-columns: 1fr; gap: 20px; }
+            header { padding: 30px 20px; }
+            h1 { font-size: 1.8rem; }
+            .contact-info { padding: 20px; }
+            .regidor-content { padding: 20px; }
+            .regidor-name { font-size: 1.4rem; }
+            .social-link { width: 40px; height: 40px; font-size: 1.1rem; }
+            .splash-logo { width: 250px; }
+            .header-logo { width: 200px; }
+            .regidor-img { padding-bottom: 130%; }
         }
-        
+
         @media (max-width: 400px) {
-            .regidor-img {
-                padding-bottom: 120%; /* Ajuste extra para móviles pequeños */
-            }
-            
-            .regidor-content {
-                padding: 15px;
-            }
+            .regidor-img { padding-bottom: 120%; }
+            .regidor-content { padding: 15px; }
         }
-        
-        /* Efectos de partículas para el fondo */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-        
+
+        /* Efectos de partículas */
+        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
         .particle {
             position: absolute;
             background: rgba(77, 166, 255, 0.3);
             border-radius: 50%;
             animation: float 15s infinite linear;
         }
-        
         @keyframes float {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) translateX(100px);
-                opacity: 0;
-            }
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
         }
     </style>
 </head>
 <body>
-    <!-- Efecto de partículas en el fondo -->
     <div class="particles" id="particles"></div>
-    
-    <!-- Pantalla de presentación CON FONDO BLANCO -->
+
     <div class="splash-screen" id="splashScreen">
         <div class="splash-content">
             <div class="splash-logo">
-                <!-- Logo rectangular CON FONDO TRANSPARENTE -->
                 <img src="./assets/images/logo-primer-informe.png" alt="Logo">
             </div>
         </div>
     </div>
-    
+
     <div class="container">
         <header>
             <div class="header-content">
                 <div class="header-logo">
-                    <!-- Logo rectangular en el encabezado CON FONDO TRANSPARENTE -->
                     <img src="./assets/images/logo-pan.png" alt="Logo PAN">
                 </div>
                 <div class="header-title">
@@ -586,7 +478,7 @@
                 </div>
             </div>
         </header>
-        
+
         <div class="regidores-grid">
             <!-- Regidora 1 -->
             <div class="regidor-card">
@@ -607,7 +499,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Regidora 2 -->
             <div class="regidor-card">
                 <div class="regidor-img">
@@ -626,7 +518,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Regidora 3 -->
             <div class="regidor-card">
                 <div class="regidor-img">
@@ -645,7 +537,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Regidora 4 -->
             <div class="regidor-card">
                 <div class="regidor-img">
@@ -670,7 +562,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Regidora 5 -->
             <div class="regidor-card">
                 <div class="regidor-img">
@@ -689,7 +581,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Regidor 6 -->
             <div class="regidor-card">
                 <div class="regidor-img">
@@ -708,8 +600,8 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Regidor 7 -->
+
+            <!-- Regidor 7 (LINK DE FACEBOOK ACTUALIZADO) -->
             <div class="regidor-card">
                 <div class="regidor-img">
                     <img src="./assets/images/regidores/jose-alfredo-navarrete-paz.jpg" alt="José Alfredo Navarrete Paz">
@@ -721,13 +613,13 @@
                         <a href="https://www.tiktok.com/@elprofenavarrete?_t=ZS-903xNgbuFoV&_r=1" class="social-link" target="_blank">
                             <i class="fab fa-tiktok"></i>
                         </a>
-                        <a href="https://www.facebook.com/share/179qbSxsKQ/?mibextid=wwXIfr" class="social-link" target="_blank">
+                        <a href="https://www.facebook.com/profile.php?id=100082522101692" class="social-link" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Regidor 8 -->
             <div class="regidor-card">
                 <div class="regidor-img">
@@ -749,7 +641,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Regidor 9 -->
             <div class="regidor-card">
                 <div class="regidor-img">
@@ -762,13 +654,13 @@
                         <a href="https://www.instagram.com/issac.diaz.cuu?igsh=aDNzZWE1dDU0d21s&utm_source=qr" class="social-link" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.facebook.com/share/1WzDuP9w7j/?mibextid=wwXIfr" class="social-link" target="_blank">
+                        <a href="https://www.facebook.com/share/1aS7fsT4Ev/" class="social-link" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Regidor 10 -->
             <div class="regidor-card">
                 <div class="regidor-img">
@@ -781,10 +673,13 @@
                         <a href="https://www.instagram.com/felix.martinez.adriano?igsh=MXYwcXEwMzI2YnIyMQ==" class="social-link" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
+                        <a href="https://www.facebook.com/share/1BR18nMR92/" class="social-link" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Regidor 11 -->
             <div class="regidor-card">
                 <div class="regidor-img">
@@ -794,7 +689,7 @@
                     <h3 class="regidor-name">Ernesto Ibarra Sarmiento</h3>
                     <p class="regidor-position">Presidente de la Comisión de Desarrollo Rural</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/share/1FAfNFUeEA/?mibextid=wwXIfr" class="social-link" target="_blank">
+                        <a href="https://www.facebook.com/share/19phNkQWmJ/" class="social-link" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="https://www.instagram.com/soyernestoibarra?igsh=MWgzZG12bHhheHdpNA%3D%3D&utm_source=qr" class="social-link" target="_blank">
@@ -804,13 +699,12 @@
                 </div>
             </div>
         </div>
-        
+
         <footer>
             <div class="footer-content">
                 <p>H. Ayuntamiento de Chihuahua</p>
                 <p>Período 2024-2027</p>
                 <div class="footer-logos">
-                    <!-- Logo rectangular en el pie de página CON FONDO TRANSPARENTE -->
                     <div class="footer-logo">
                         <img src="./assets/images/logo-regidores.png" alt="Logo Regidores">
                     </div>
@@ -820,40 +714,28 @@
     </div>
 
     <script>
-        // Ocultar la pantalla de presentación después de 5 segundos
         setTimeout(function() {
             document.getElementById('splashScreen').style.opacity = '0';
             setTimeout(function() {
                 document.getElementById('splashScreen').style.display = 'none';
             }, 800);
         }, 5000);
-        
-        // Crear efecto de partículas en el fondo
+
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 30;
-            
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
-                
-                // Tamaño aleatorio
                 const size = Math.random() * 20 + 5;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
-                
-                // Posición inicial aleatoria
                 particle.style.left = `${Math.random() * 100}%`;
                 particle.style.top = `${Math.random() * 100}%`;
-                
-                // Retardo de animación aleatorio
                 particle.style.animationDelay = `${Math.random() * 15}s`;
-                
                 particlesContainer.appendChild(particle);
             }
         }
-        
-        // Inicializar partículas cuando la página cargue
         window.addEventListener('load', createParticles);
     </script>
 </body>
